@@ -21,11 +21,11 @@ spec:
   lookupPolicy:
     local: true
   tags:
-    - name: latest
+    - name: 1.0.0
       annotations: null
       from:
         kind: DockerImage
-        name: 'ghcr.io/nerc-images/vscode-java:main'
+        name: 'quay.io/nerc-images/vscode-java:1.0.0'
       importPolicy:
         scheduled: true
       referencePolicy:
