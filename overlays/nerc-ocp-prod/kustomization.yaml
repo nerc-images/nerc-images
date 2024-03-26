@@ -4,3 +4,4 @@ resources:
   - ../../imagestreams/vscode-java
   - ../../imagestreams/jupyter-cpp-cling
   - ../../imagestreams/vscode-cpp-cling
+  - ../../imagestreams/cuda-jupyter-tensorflow
