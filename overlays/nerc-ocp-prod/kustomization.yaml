@@ -1,7 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../../imagestreams/vscode-java
-  - ../../imagestreams/jupyter-cpp-cling
-  - ../../imagestreams/vscode-cpp-cling
   - ../../imagestreams/cuda-jupyter-tensorflow
+  - ../../imagestreams/jupyter-cpp-cling
+  - ../../imagestreams/jupyter-rust
+  - ../../imagestreams/vscode-cpp-cling
+  - ../../imagestreams/vscode-java
