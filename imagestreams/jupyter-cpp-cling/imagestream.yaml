@@ -10,7 +10,7 @@ metadata:
       https://github.com/nerc-images/jupyter-cpp-cling
     opendatahub.io/notebook-image-name: >-
       Jupyter C++ Cling
-    opendatahub.io/notebook-image-desc: >-
+    opendatahub.io/notebook-image-desc: |-
       An OpenShift AI Image running Jupyter Lab for C++ development.
       - Based on the [Xeus Cling project](https://github.com/jupyter-xeus/xeus-cling)
       on GitHub for Jupyter Lab Notebook integration.

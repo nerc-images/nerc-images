@@ -1,20 +1,20 @@
 apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
-  name: vscode-cpp-cling
+  name: jupyter-rust
   namespace: redhat-ods-applications
   labels:
     opendatahub.io/notebook-image: "true"
   annotations:
     opendatahub.io/notebook-image-url: >-
-      https://github.com/nerc-images/vscode-cpp-cling
+      https://github.com/nerc-images/jupyter-rust
     opendatahub.io/notebook-image-name: >-
-      VSCode C++ Cling
+      Jupyter Rust
     opendatahub.io/notebook-image-desc: |-
-      An OpenShift AI Image running VSCode for C++ development.
-      - Based on the [Xeus Cling project](https://github.com/jupyter-xeus/xeus-cling)
+      An OpenShift AI Image running Jupyter Lab for Rust development.
+      - Based on the [Evcxr project](https://github.com/evcxr/evcxr)
       on GitHub for Jupyter Lab Notebook integration.
-      - Uses C++ Kernel 11, 14, and 17 and gcc-c++ compiler support.
+      - Uses Rust 1.79.
       - Used by Professor Leonidas Kontothanassis, MassMutual Professor of the
       Practice of Computing & Data Sciences + Director of Industry Engagement.
 spec:
@@ -25,7 +25,7 @@ spec:
       annotations: null
       from:
         kind: DockerImage
-        name: 'quay.io/nerc-images/vscode-cpp-cling:1.0.0'
+        name: 'quay.io/nerc-images/jupyter-rust:1.0.0'
       importPolicy:
         scheduled: true
       referencePolicy:
