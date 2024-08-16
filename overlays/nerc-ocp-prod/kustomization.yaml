@@ -6,3 +6,4 @@ resources:
   - ../../imagestreams/jupyter-rust
   - ../../imagestreams/vscode-cpp-cling
   - ../../imagestreams/vscode-java
+  - ../../imagestreams/vscode-rust
