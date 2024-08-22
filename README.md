@@ -13,3 +13,4 @@ Below is an overview, technical information, installed packages, and how to get 
 | [prom-keycloak-proxy](https://github.com/nerc-images/prom-keycloak-proxy) | A Proxy for Prometheus metrics queries that is backed by Keycloak Fine-Grained Resource Permissions. |
 | [vscode-cpp-cling](https://github.com/nerc-images/vscode-cpp-cling) | An OpenShift AI Image running VSCode for C++ development. |
 | [vscode-java](https://github.com/nerc-images/vscode-java) | An OpenShift AI Image running VSCode for Java development. |
+| [vscode-rust](https://github.com/nerc-images/vscode-rust) | An OpenShift AI Image running VSCode for Rust development. |
