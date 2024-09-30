@@ -7,3 +7,4 @@ resources:
   - ../../imagestreams/vscode-cpp-cling
   - ../../imagestreams/vscode-java
   - ../../imagestreams/vscode-rust
+  - ../../imagestreams/openad_workbench
