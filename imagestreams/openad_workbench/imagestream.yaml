@@ -11,7 +11,7 @@ metadata:
     opendatahub.io/notebook-image-name: >-
       OpenAD Workbench
     opendatahub.io/notebook-image-desc: >-
-	A Jupyter OpenShift AI Image with OpenAD for GPUs.
+      A Jupyter OpenShift AI Image with OpenAD for GPUs.
 spec:
   lookupPolicy:
     local: true
