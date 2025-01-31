@@ -1,0 +1,29 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: openad_workbench
+  namespace: redhat-ods-applications
+  labels:
+    opendatahub.io/notebook-image: "true"
+  annotations:
+    opendatahub.io/notebook-image-url: >-
+      https://github.com/nerc-images/openad_workbench
+    opendatahub.io/notebook-image-name: >-
+      OpenAD Workbench
+    opendatahub.io/notebook-image-desc: >-
+      A Jupyter OpenShift AI Image with OpenAD for GPUs.
+    opendatahub.io/recommended-accelerators: >-
+      ["nvidia.com/gpu"]
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - name: latest
+      annotations: null
+      from:
+        kind: DockerImage
+        name: 'quay.io/ibmdpdev/openad_workbench:latest'
+      importPolicy:
+        scheduled: true
+      referencePolicy:
+        type: Source
