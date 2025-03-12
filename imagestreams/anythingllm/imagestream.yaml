@@ -1,0 +1,29 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: anythingllm
+  namespace: redhat-ods-applications
+  labels:
+    opendatahub.io/notebook-image: "true"
+  annotations:
+    opendatahub.io/notebook-image-url: >-
+      https://github.com/nerc-images/anythingllm
+    opendatahub.io/notebook-image-name: >-
+      AnythingLLM
+    opendatahub.io/notebook-image-desc: |-
+      AnythingLLM is a collection of open-source LLMs and tools for building and
+      deploying AI applications. It includes models for text generation, image
+      generation, and more.
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - name: 1.0.0
+      annotations: null
+      from:
+        kind: DockerImage
+        name: 'quay.io/rh-aiservices-bu/anythingllm-workbench'
+      importPolicy:
+        scheduled: true
+      referencePolicy:
+        type: Source
