@@ -9,3 +9,4 @@ resources:
   - ../../imagestreams/vscode-rust
   - ../../imagestreams/openad_workbench
   - ../../imagestreams/rclone
+  - ../../imagestreams/anythingllm
