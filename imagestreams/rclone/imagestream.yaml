@@ -1,0 +1,32 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: rclone
+  namespace: redhat-ods-applications
+  labels:
+    opendatahub.io/notebook-image: "true"
+  annotations:
+    opendatahub.io/notebook-image-url: >-
+      https://github.com/nerc-images/rclone
+    opendatahub.io/notebook-image-name: >-
+      Rclone
+    opendatahub.io/notebook-image-desc: |-
+      Rclone is a program to manage files on cloud storage.
+      It is a feature-rich alternative to cloud vendors' web
+      storage interfaces. Over 40 cloud storage products
+      support rclone including S3 object stores, business
+      & consumer file storage services, as well as standard
+      transfer protocols.
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - name: 1.0.0
+      annotations: null
+      from:
+        kind: DockerImage
+        name: 'quay.io/guimou/rclone-web-openshift:odh-rhods_latest'
+      importPolicy:
+        scheduled: true
+      referencePolicy:
+        type: Source
