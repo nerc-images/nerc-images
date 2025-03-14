@@ -1,0 +1,31 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: rstudio
+  namespace: redhat-ods-applications
+  labels:
+    opendatahub.io/notebook-image: "true"
+  annotations:
+    opendatahub.io/notebook-image-url: >-
+      https://github.com/nerc-images/rstudio
+    opendatahub.io/notebook-image-name: >-
+      RStudio
+    opendatahub.io/notebook-image-desc: |-
+      RStudio is an integrated development environment (IDE)
+      for R, a programming language for statistical computing
+      and graphics. It provides a user-friendly interface for
+      data analysis, visualization, and reporting, making it a
+      popular choice among data scientists and statisticians.
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - name: 1.0.0
+      annotations: null
+      from:
+        kind: DockerImage
+        name: 'quay.io/opendatahub-contrib/workbench-images:rstudio-c9s-py39_2023b_latest'
+      importPolicy:
+        scheduled: true
+      referencePolicy:
+        type: Source
