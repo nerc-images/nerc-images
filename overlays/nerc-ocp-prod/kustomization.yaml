@@ -10,3 +10,4 @@ resources:
   - ../../imagestreams/openad_workbench
   - ../../imagestreams/rclone
   - ../../imagestreams/anythingllm
+  - ../../imagestreams/rstudio
