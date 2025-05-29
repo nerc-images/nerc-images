@@ -7,7 +7,7 @@ metadata:
     opendatahub.io/notebook-image: "true"
   annotations:
     opendatahub.io/notebook-image-url: >-
-      https://github.com/nerc-images/rclone
+      https://github.com/guimou/rclone-web-on-openshift
     opendatahub.io/notebook-image-name: >-
       Rclone
     opendatahub.io/notebook-image-desc: |-

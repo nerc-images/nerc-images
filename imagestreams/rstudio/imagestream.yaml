@@ -7,7 +7,7 @@ metadata:
     opendatahub.io/notebook-image: "true"
   annotations:
     opendatahub.io/notebook-image-url: >-
-      https://github.com/nerc-images/rstudio
+      https://github.com/opendatahub-io-contrib/workbench-images/tree/main/recipes/rstudio-r-c9s-py311_2023c_20230922
     opendatahub.io/notebook-image-name: >-
       RStudio
     opendatahub.io/notebook-image-desc: |-
@@ -24,7 +24,7 @@ spec:
       annotations: null
       from:
         kind: DockerImage
-        name: 'quay.io/opendatahub-contrib/workbench-images:rstudio-c9s-py39_2023b_latest'
+        name: 'quay.io/opendatahub-contrib/workbench-images:rstudio-r-c9s-py311_2023c_latest'
       importPolicy:
         scheduled: true
       referencePolicy:
