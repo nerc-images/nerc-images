@@ -7,7 +7,7 @@ metadata:
     opendatahub.io/notebook-image: "true"
   annotations:
     opendatahub.io/notebook-image-url: >-
-      https://github.com/nerc-images/anythingllm
+      https://github.com/nerc-project/llm-on-nerc/tree/main/llm-clients/anythingllm
     opendatahub.io/notebook-image-name: >-
       AnythingLLM
     opendatahub.io/notebook-image-desc: |-
