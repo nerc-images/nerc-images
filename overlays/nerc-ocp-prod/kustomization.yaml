@@ -11,3 +11,4 @@ resources:
   - ../../imagestreams/rclone
   - ../../imagestreams/anythingllm
   - ../../imagestreams/rstudio
+  - ../../imagestreams/altastata-jupyter-datascience
