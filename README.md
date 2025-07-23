@@ -17,4 +17,4 @@ Below is an overview, technical information, installed packages, and how to get 
 | [rclone](https://github.com/guimou/rclone-web-on-openshift) | An OpenShift AI Image running Rclone. |
 | [anythingllm](https://github.com/nerc-project/llm-on-nerc/tree/main/llm-clients/anythingllm) | An OpenShift AI Image running AnythingLLM. |
 | [rstudio](https://github.com/opendatahub-io-contrib/workbench-images/tree/main/recipes/rstudio-r-c9s-py311_2023c_20230922) | An OpenShift AI Image running RStudio. |
-| [altastata-jupyter-datascience](https://github.com/nerc-images/altastata-jupyter-datascience) | An OpenShift AI Image running Jupyter Lab for data science development. |
+| [altastata-jupyter-datascience](https://github.com/SergeVil/altastata-python-package) | An OpenShift AI Image running Jupyter Lab for data science development at the AltaStata Fortified Data Lake. |
