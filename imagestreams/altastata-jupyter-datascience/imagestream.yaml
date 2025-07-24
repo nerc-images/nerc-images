@@ -1,0 +1,29 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: altastata-jupyter-datascience
+  namespace: redhat-ods-applications
+  labels:
+    opendatahub.io/notebook-image: "true"
+  annotations:
+    opendatahub.io/notebook-image-url: >-
+      https://github.com/nerc-images/altastata-jupyter-datascience
+    opendatahub.io/notebook-image-name: >-
+      Altastata Jupyter DataScience
+    opendatahub.io/notebook-image-desc: |-
+      An OpenShift AI Image running Jupyter Lab for data science development.
+      - Based on the Altastata Jupyter DataScience image.
+      - Provides a comprehensive data science environment.
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - name: 2025a_latest
+      annotations: null
+      from:
+        kind: DockerImage
+        name: 'ghcr.io/sergevil/altastata/jupyter-datascience:2025a_latest'
+      importPolicy:
+        scheduled: true
+      referencePolicy:
+        type: Source
