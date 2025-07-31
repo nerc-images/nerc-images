@@ -22,7 +22,7 @@ spec:
       annotations: null
       from:
         kind: DockerImage
-        name: 'ghcr.io/sergevil/altastata/jupyter-datascience:2025a_latest'
+        name: 'ghcr.io/sergevil/altastata/jupyter-datascience-amd64:2025a_latest'
       importPolicy:
         scheduled: true
       referencePolicy:
