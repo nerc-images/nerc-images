@@ -18,11 +18,11 @@ spec:
   lookupPolicy:
     local: true
   tags:
-    - name: latest
+    - name: '1.1.0'
       annotations: null
       from:
         kind: DockerImage
-        name: 'quay.io/nerc-images/cuda-jupyter-tensorflow:1.0.0'
+        name: 'quay.io/nerc-images/cuda-jupyter-tensorflow:1.1.0'
       importPolicy:
         scheduled: true
       referencePolicy:
