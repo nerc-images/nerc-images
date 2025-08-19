@@ -1,28 +1,29 @@
 apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
-  name: cuda-jupyter-tensorflow
+  name: csw-base-pytorch
   namespace: redhat-ods-applications
   labels:
     opendatahub.io/notebook-image: "true"
   annotations:
     opendatahub.io/notebook-image-url: >-
-      https://github.com/nerc-images/cuda-jupyter-tensorflow
+      https://github.com/nerc-images/csw-base-pytorch
     opendatahub.io/notebook-image-name: >-
-      Tensorflow Jupyter CUDA
+      CSW Base PyTorch
     opendatahub.io/notebook-image-desc: >-
-      A Jupyter OpenShift AI Image with Tensorflow and CUDA for GPUs.
-      Based on the [opendatahub workbench images](https://github.com/opendatahub-io-contrib/workbench-images)
+      A Jupyter OpenShift AI Image with PyTorch and CUDA for GPUs.
+      Built for Jonathan Appavoo's GPU class at Boston University for Programming Massively Parallel Multiprocessors and Heterogeneous Systems.
+      Based on the [Red Hat Data Services notebook images](https://github.com/red-hat-data-services/notebooks/)
       on GitHub for Jupyter Lab Notebook integration.
 spec:
   lookupPolicy:
     local: true
   tags:
-    - name: '1.2.0'
+    - name: '1.0.0'
       annotations: null
       from:
         kind: DockerImage
-        name: 'quay.io/nerc-images/cuda-jupyter-tensorflow:1.2.0'
+        name: 'quay.io/nerc-images/csw-base-pytorch:1.0.0'
       importPolicy:
         scheduled: true
       referencePolicy:
