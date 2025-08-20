@@ -5,7 +5,10 @@ Below is an overview, technical information, installed packages, and how to get 
 
 | NERC Container Images | Description |
 | --- | --- |
+| [cuda-jupyter-pytorch](https://github.com/nerc-images/cuda-jupyter-pytorch) | A Jupyter OpenShift AI Image with PyTorch and CUDA for GPUs. |
 | [cuda-jupyter-tensorflow](https://github.com/nerc-images/cuda-jupyter-tensorflow) | A Jupyter OpenShift AI Image with Tensorflow and CUDA for GPUs. |
+| [csw-base-cuda-minimal](https://github.com/nerc-images/csw-base-cuda-minimal) | A Jupyter OpenShift AI Image with minimal dependencies and CUDA for GPUs.  Built for Jonathan Appavoo's GPU class at Boston University for Programming Massively Parallel Multiprocessors and Heterogeneous Systems. |
+| [csw-base-pytorch](https://github.com/nerc-images/csw-base-pytorch) | A Jupyter OpenShift AI Image with PyTorch and CUDA for GPUs.  Built for Jonathan Appavoo's GPU class at Boston University for Programming Massively Parallel Multiprocessors and Heterogeneous Systems. |
 | [jupyter-cpp-cling](https://github.com/nerc-images/jupyter-cpp-cling) | An OpenShift AI Image running Jupyter Lab for C++ development. |
 | [jupyter-rust](https://github.com/nerc-images/jupyter-rust) | An OpenShift AI Image running Jupyter Lab for Rust development. |
 | [keycloak-ansible](https://github.com/nerc-images/keycloak-ansible) | A simple image with Ansible installed to run Keycloak Ansible roles to configure Keycloak Fine-Grained Resource Permissions. |
