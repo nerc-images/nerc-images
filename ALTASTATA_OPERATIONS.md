@@ -4,7 +4,7 @@ This document describes all the operations performed to add the new AltaStata Ju
 
 ## Overview
 
-Added a new OpenShift ImageStream for the AltaStata Jupyter DataScience image (`ghcr.io/sergevil/altastata/jupyter-datascience:2025a_latest`) to the NERC Images repository.
+Added a new OpenShift ImageStream for the AltaStata Jupyter DataScience image (`ghcr.io/sergevil/altastata/jupyter-datascience:2025d_latest`) to the NERC Images repository.
 
 ## Operations Performed
 
@@ -39,11 +39,11 @@ spec:
   lookupPolicy:
     local: true
   tags:
-    - name: 2025a_latest
+    - name: 2025d_latest
       annotations: null
       from:
         kind: DockerImage
-        name: 'ghcr.io/sergevil/altastata/jupyter-datascience:2025a_latest'
+        name: 'ghcr.io/sergevil/altastata/jupyter-datascience:2025d_latest'
       importPolicy:
         scheduled: true
       referencePolicy:
@@ -122,7 +122,7 @@ gh repo set-default SergeVil/nerc-images
 gh pr create --repo nerc-images/nerc-images --title "Add altastata-jupyter-datascience image stream" --body "This PR adds a new image stream for the AltaStata Jupyter DataScience image.
 
 ## Changes
-- Added new image stream for ghcr.io/sergevil/altastata/jupyter-datascience:2025a_latest
+- Added new image stream for ghcr.io/sergevil/altastata/jupyter-datascience:2025d_latest
 - Updated README.md with correct link to https://github.com/SergeVil/altastata-python-package
 - Added proper OpenDataHub integration metadata
 
@@ -138,8 +138,8 @@ gh pr create --repo nerc-images/nerc-images --title "Add altastata-jupyter-datas
 
 ### ✅ Successfully Created
 - **Pull Request:** [https://github.com/nerc-images/nerc-images/pull/19](https://github.com/nerc-images/nerc-images/pull/19)
-- **Image Stream:** `altastata-jupyter-datascience:2025a_latest`
-- **Source Image:** `ghcr.io/sergevil/altastata/jupyter-datascience:2025a_latest`
+- **Image Stream:** `altastata-jupyter-datascience:2025d_latest`
+- **Source Image:** `ghcr.io/sergevil/altastata/jupyter-datascience:2025d_latest`
 - **Documentation:** Updated README.md with correct link and description
 
 ### 📁 Files Added
@@ -154,7 +154,7 @@ gh pr create --repo nerc-images/nerc-images --title "Add altastata-jupyter-datas
 ### OpenShift Integration
 - **Namespace:** `redhat-ods-applications`
 - **Image Stream Name:** `altastata-jupyter-datascience`
-- **Tag:** `2025a_latest`
+- **Tag:** `2025d_latest`
 - **OpenDataHub Integration:** ✅ Enabled with proper metadata
 
 ### Access Information
