@@ -16,3 +16,4 @@ resources:
   - ../../imagestreams/rstudio
   - ../../imagestreams/altastata-jupyter-datascience
   - ../../imagestreams/vscode-go
+  - ../../imagestreams/ai-telemetry-workbench
