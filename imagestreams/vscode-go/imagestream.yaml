@@ -1,28 +1,29 @@
 apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
-  name: cuda-jupyter-tensorflow
+  name: vscode-go
   namespace: redhat-ods-applications
   labels:
     opendatahub.io/notebook-image: "true"
   annotations:
     opendatahub.io/notebook-image-url: >-
-      https://github.com/nerc-images/cuda-jupyter-tensorflow
+      https://github.com/nerc-images/vscode-go
     opendatahub.io/notebook-image-name: >-
-      Tensorflow Jupyter CUDA
+      NERC VSCode go
     opendatahub.io/notebook-image-desc: >-
-      A Jupyter OpenShift AI Image with Tensorflow and CUDA for GPUs.
-      Based on the [opendatahub workbench images](https://github.com/opendatahub-io-contrib/workbench-images)
+      An OpenShift AI Image running VSCode for Go Lang development.
+      Based on the [gophernotes project](https://github.com/gopherdata/gophernotes)
       on GitHub for Jupyter Lab Notebook integration.
+      Uses Go version 1.21.7 support.
 spec:
   lookupPolicy:
     local: true
   tags:
-    - name: '1.2.0'
+    - name: latest
       annotations: null
       from:
         kind: DockerImage
-        name: 'quay.io/nerc-images/cuda-jupyter-tensorflow:1.2.0'
+        name: 'quay.io/nerc-images/vscode-go:1.0.1'
       importPolicy:
         scheduled: true
       referencePolicy:

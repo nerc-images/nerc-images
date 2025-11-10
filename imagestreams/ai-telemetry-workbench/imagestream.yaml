@@ -1,28 +1,29 @@
 apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
-  name: cuda-jupyter-tensorflow
+  name: ai-telemetry-workbench
   namespace: redhat-ods-applications
   labels:
     opendatahub.io/notebook-image: "true"
   annotations:
     opendatahub.io/notebook-image-url: >-
-      https://github.com/nerc-images/cuda-jupyter-tensorflow
+      https://github.com/nerc-images/ai-telemetry-workbench
     opendatahub.io/notebook-image-name: >-
-      Tensorflow Jupyter CUDA
+      AI Telemetry workbench
     opendatahub.io/notebook-image-desc: >-
-      A Jupyter OpenShift AI Image with Tensorflow and CUDA for GPUs.
-      Based on the [opendatahub workbench images](https://github.com/opendatahub-io-contrib/workbench-images)
-      on GitHub for Jupyter Lab Notebook integration.
+      An OpenShift AI Image for Java and Go development.
+      Contains all the dependencies to run develop AI Telemetry
+      and the Prometheus Keycloak Proxy for fine-grained access
+      control to Red Hat ACM Observability metrics.
 spec:
   lookupPolicy:
     local: true
   tags:
-    - name: '1.2.0'
+    - name: 1.0.0
       annotations: null
       from:
         kind: DockerImage
-        name: 'quay.io/nerc-images/cuda-jupyter-tensorflow:1.2.0'
+        name: 'quay.io/nerc-images/ai-telemetry-workbench:1.0.0'
       importPolicy:
         scheduled: true
       referencePolicy:
