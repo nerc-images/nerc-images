@@ -4,7 +4,7 @@ This document describes all the operations performed to add the new AltaStata Ju
 
 ## Overview
 
-Added a new OpenShift ImageStream for the AltaStata Jupyter DataScience image (`ghcr.io/sergevil/altastata/jupyter-datascience:2025d_latest`) to the NERC Images repository.
+Added a new OpenShift ImageStream for the AltaStata Jupyter DataScience image (`ghcr.io/sergevil/altastata/jupyter-datascience:2025h_latest`) to the NERC Images repository.
 
 ## Operations Performed
 
@@ -39,11 +39,11 @@ spec:
   lookupPolicy:
     local: true
   tags:
-    - name: 2025d_latest
+    - name: 2025h_latest
       annotations: null
       from:
         kind: DockerImage
-        name: 'ghcr.io/sergevil/altastata/jupyter-datascience:2025d_latest'
+        name: 'ghcr.io/sergevil/altastata/jupyter-datascience:2025h_latest'
       importPolicy:
         scheduled: true
       referencePolicy:
@@ -119,87 +119,21 @@ git push -u origin add-altastata-jupyter-datascience
 #### Create Pull Request
 ```bash
 gh repo set-default SergeVil/nerc-images
-gh pr create --repo nerc-images/nerc-images --title "Add altastata-jupyter-datascience image stream" --body "This PR adds a new image stream for the AltaStata Jupyter DataScience image.
+gh pr create --repo nerc-images/nerc-images --title "Update altastata-jupyter-datascience to 2025h_latest tag" --body "This PR updates the AltaStata Jupyter DataScience image stream to use the latest 2025h_latest tag.
 
 ## Changes
-- Added new image stream for ghcr.io/sergevil/altastata/jupyter-datascience:2025d_latest
-- Updated README.md with correct link to https://github.com/SergeVil/altastata-python-package
-- Added proper OpenDataHub integration metadata
-
-## Files Added
-- imagestreams/altastata-jupyter-datascience/imagestream.yaml
-- imagestreams/altastata-jupyter-datascience/kustomization.yaml
+- Updated imagestream.yaml to use 2025h_latest tag instead of 2025d_latest
+- Updated ALTASTATA_OPERATIONS.md documentation to reflect the new tag
+- Ensures the image stream tracks ghcr.io/sergevil/altastata/jupyter-datascience:2025h_latest
 
 ## Files Modified
-- README.md - Updated with new image stream entry"
+- imagestreams/altastata-jupyter-datascience/imagestream.yaml - Updated tag from 2025d_latest to 2025h_latest
+- ALTASTATA_OPERATIONS.md - Updated documentation to reflect new tag"
 ```
 
 ## Final Results
 
 ### ✅ Successfully Created
-- **Pull Request:** [https://github.com/nerc-images/nerc-images/pull/19](https://github.com/nerc-images/nerc-images/pull/19)
-- **Image Stream:** `altastata-jupyter-datascience:2025d_latest`
-- **Source Image:** `ghcr.io/sergevil/altastata/jupyter-datascience:2025d_latest`
-- **Documentation:** Updated README.md with correct link and description
-
-### 📁 Files Added
-- `imagestreams/altastata-jupyter-datascience/imagestream.yaml`
-- `imagestreams/altastata-jupyter-datascience/kustomization.yaml`
-
-### 📝 Files Modified
-- `README.md` - Added new image stream entry with correct link
-
-## Deployment Information
-
-### OpenShift Integration
-- **Namespace:** `redhat-ods-applications`
-- **Image Stream Name:** `altastata-jupyter-datascience`
-- **Tag:** `2025d_latest`
-- **OpenDataHub Integration:** ✅ Enabled with proper metadata
-
-### Access Information
-- **Repository:** [https://github.com/SergeVil/altastata-python-package](https://github.com/SergeVil/altastata-python-package)
-- **Visibility:** Public (readable by everyone, writable only by owner)
-- **Description:** "An OpenShift AI Image running Jupyter Lab for data science development at the AltaStata Fortified Data Lake"
-
-## Next Steps
-
-1. **Review Process:** Wait for maintainers to review the pull request
-2. **Deployment:** Once merged, the image stream will be available in the NERC OpenShift cluster
-3. **Testing:** Verify the image stream works correctly in the OpenShift environment
-4. **Documentation:** Update any additional documentation as needed
-
-## Commands Reference
-
-### Useful Git Commands
-```bash
-# Check status
-git status
-
-# View differences with upstream
-git diff upstream/main
-
-# View commit history
-git log --oneline -5
-
-# Check remotes
-git remote -v
-```
-
-### Useful GitHub CLI Commands
-```bash
-# View PR status
-gh pr view
-
-# List PRs
-gh pr list
-
-# Check repository visibility
-gh repo view --json visibility
-```
-
----
-
-**Created:** January 2025
-**Repository:** [https://github.com/SergeVil/nerc-images](https://github.com/SergeVil/nerc-images)
-**Pull Request:** [https://github.com/nerc-images/nerc-images/pull/19](https://github.com/nerc-images/nerc-images/pull/19)
+- **Pull Request:** [https://github.com/nerc-images/nerc-images/pull/27](https://github.com/nerc-images/nerc-images/pull/27)
+- **Image Stream:** `altastata-jupyter-datascience:2025h_latest`
+- **Source Image:** `ghcr.io/sergevil/altastata/jupyter-datascience:2025h_latest`
