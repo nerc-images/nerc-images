@@ -18,11 +18,11 @@ spec:
   lookupPolicy:
     local: true
   tags:
-    - name: 2025d_latest
+    - name: 2025h_latest
       annotations: null
       from:
         kind: DockerImage
-        name: 'ghcr.io/sergevil/altastata/jupyter-datascience:2025d_latest'
+        name: 'ghcr.io/sergevil/altastata/jupyter-datascience:2025h_latest'
       importPolicy:
         scheduled: true
       referencePolicy:
